@@ -2,19 +2,26 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'guru.xel'
+version '1.0'
 
 repositories {
     mavenCentral()
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.7.4",
-            'org.junit.jupiter:junit-jupiter-api:5.9.0',
-    )
+            'org.junit.jupiter:junit-jupiter:5.9.1',
+            'com.codeborne:selenide:6.8.1'
 
+    )
 }
 
 test {
